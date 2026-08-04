@@ -9,6 +9,7 @@
 ## Live
 
 - `https://brand.tbmc.dev`
-- Sites deployment and custom domain: active
-- Public DNS: CNAME and verification TXT records propagated
-- HTTPS: active; root and embedded brand-system document return successfully
+- Direct Vercel production deployment: `onenz-tbmc-brand-system`
+- Public DNS: `brand.tbmc.dev` points to the Vercel-assigned CNAME
+- HTTPS: active; the root serves the bundled brand-system page directly with a public `200`
+- Previous Sites deployment retained temporarily as a cached-route fallback during DNS convergence
