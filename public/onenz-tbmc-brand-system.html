@@ -255,18 +255,54 @@
         scroll-snap-align:start;
       }
       [data-screen-label="In-use section"]>div:nth-child(4),
-      [data-screen-label="In-use section"]>div:nth-child(6){
+      [data-screen-label="In-use section"]>div:nth-child(6),
+      [data-screen-label="In-use section"]>div:nth-child(8),
+      [data-screen-label="In-use section"]>div:nth-child(10){
         flex-direction:column!important;
         gap:28px!important;
       }
       [data-screen-label="In-use section"]>div:nth-child(4)>div,
-      [data-screen-label="In-use section"]>div:nth-child(6)>div{
+      [data-screen-label="In-use section"]>div:nth-child(6)>div,
+      [data-screen-label="In-use section"]>div:nth-child(8)>div,
+      [data-screen-label="In-use section"]>div:nth-child(10)>div{
         width:100%;
         min-width:0;
         flex:none!important;
       }
       [data-screen-label="In-use section"]>div:nth-child(4)>div>div{height:300px!important}
-      [data-screen-label="In-use section"]>div:nth-child(6)>div:first-child>div:first-child{height:300px!important}
+      [data-screen-label="In-use section"]>div:nth-child(6)>div>div:first-child{height:300px!important}
+      [data-screen-label="In-use section"]>div:nth-child(8)>div>div:first-child{height:220px!important}
+      [data-screen-label="In-use section"]>div:nth-child(10)>div:first-child>div:first-child{height:300px!important}
+      [data-screen-label="In-use section"]>div:nth-child(6)>div>div:last-child,
+      [data-screen-label="In-use section"]>div:nth-child(8)>div>div:last-child,
+      [data-screen-label="In-use section"]>div:nth-child(10)>div>div:last-child{
+        align-items:flex-start!important;
+        padding:14px 16px!important;
+        line-height:1.45;
+      }
+      [data-screen-label="In-use section"]>div:nth-child(8)>div:first-child>div:first-child>div:last-child{
+        display:none;
+      }
+      [data-screen-label="In-use section"]>div:nth-child(8)>div:nth-child(2)>div:first-child>div:first-child{
+        width:50%!important;
+        box-sizing:border-box;
+        padding:16px 14px!important;
+      }
+      [data-screen-label="In-use section"]>div:nth-child(8)>div:nth-child(2)>div:first-child>div:first-child>div:first-child>div:first-child{
+        font-size:15.5px!important;
+      }
+      [data-screen-label="In-use section"]>div:nth-child(8)>div:nth-child(2)>div:first-child>span:last-child>span{
+        right:6px!important;
+        bottom:6px!important;
+        max-width:calc(100% - 12px);
+        box-sizing:border-box;
+        padding:4px 5px!important;
+        font-size:4.5px!important;
+        line-height:1.35;
+        letter-spacing:.1em!important;
+        text-align:right;
+        white-space:normal;
+      }
       [data-screen-label="In-use section"]>div:last-child{
         flex-direction:column!important;
         align-items:flex-start!important;
@@ -705,6 +741,108 @@
             <div style="position:absolute;left:22px;right:22px;bottom:18px;display:flex;align-items:center;justify-content:space-between"><span style="width:3px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.25"></span><span style="width:3px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.4"></span><span style="width:4px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.55"></span><span style="width:4px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.7"></span><span style="width:6px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.85"></span><span style="width:10px;height:3px;border-radius:1px;background:#2BDE8C"></span><span style="width:18px;height:3px;border-radius:1px;background:#2BDE8C"></span></div>
           </div>
           <span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">EVENT BADGE · LANYARD</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:44px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">SOCIAL TILES</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
+      <div style="display:flex;gap:18px;margin-top:24px">
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:340px;overflow:hidden;background:#111015">
+            <img src="assets/web/crowd-1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(0.9)" alt="People, duotone">
+            <span style="position:absolute;inset:0;background:#2BDE8C;mix-blend-mode:color;opacity:0.9"></span>
+            <span style="position:absolute;inset:0;background:#111015;mix-blend-mode:multiply;opacity:0.32"></span>
+            <div style="position:absolute;left:16px;top:16px;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:8px">
+                <img src="assets/web/onenz-on-dark-v2.png" style="height:13px;width:auto;display:block" alt="one.nz">
+                <span style="width:1px;height:16px;background:rgba(255,255,255,0.55)"></span>
+                <img src="assets/web/tbmc-icon-green.png" style="height:14px;width:auto;display:block" alt=""><img src="assets/web/tbmc-words-white.png" style="height:14px;width:auto;display:block;margin-left:4px" alt="">
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:5px"><span style="width:2px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.25"></span><span style="width:2px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.35"></span><span style="width:2px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.45"></span><span style="width:2px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.55"></span><span style="width:3px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.65"></span><span style="width:3px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.75"></span><span style="width:4px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.85"></span><span style="width:6px;height:2px;border-radius:1px;background:#2BDE8C"></span><span style="width:10px;height:2px;border-radius:1px;background:#2BDE8C"></span></div>
+            </div>
+            <div style="position:absolute;left:16px;bottom:16px;right:16px">
+              <div style="font-family:var(--font-display);font-weight:300;font-size:19px;letter-spacing:-0.03em;line-height:1.14;color:#F7F6F4">Every memory starts<br>as a connection.</div>
+              <span style="display:block;width:30px;height:2px;background:#2BDE8C;margin-top:10px"></span>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">1:1 · PEOPLE DUOTONE + TRAIL LOCKUP</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">SOC 01</span></div>
+        </div>
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:340px;overflow:hidden;background:#DFDDD8">
+            <img src="assets/web/crowd-3.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(0.9);opacity:0.3" alt="Device, ghosted">
+            <span style="position:absolute;left:40%;top:26%;width:26%;height:50%;border-radius:14px;background-image:radial-gradient(#17B26A 1.3px,transparent 1.3px);background-size:9px 9px"></span>
+            <span style="position:absolute;left:31%;top:62%;width:9%;height:11%;background-image:radial-gradient(#17B26A 1.1px,transparent 1.1px);background-size:9px 9px;opacity:0.55"></span>
+            <div style="position:absolute;left:16px;top:16px;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:8px">
+                <img src="assets/web/onenz-on-light.png" style="height:13px;width:auto;display:block" alt="one.nz">
+                <span style="width:1px;height:16px;background:rgba(24,23,28,0.4)"></span>
+                <img src="assets/web/tbmc-icon-green-deep.png" style="height:14px;width:auto;display:block" alt=""><img src="assets/web/tbmc-words-ink.png" style="height:14px;width:auto;display:block;margin-left:4px" alt="">
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:5px"><span style="width:2px;height:2px;border-radius:1px;background:#17B26A;opacity:0.25"></span><span style="width:2px;height:2px;border-radius:1px;background:#17B26A;opacity:0.35"></span><span style="width:2px;height:2px;border-radius:1px;background:#17B26A;opacity:0.45"></span><span style="width:2px;height:2px;border-radius:1px;background:#17B26A;opacity:0.55"></span><span style="width:3px;height:2px;border-radius:1px;background:#17B26A;opacity:0.65"></span><span style="width:3px;height:2px;border-radius:1px;background:#17B26A;opacity:0.75"></span><span style="width:4px;height:2px;border-radius:1px;background:#17B26A;opacity:0.85"></span><span style="width:6px;height:2px;border-radius:1px;background:#17B26A"></span><span style="width:10px;height:2px;border-radius:1px;background:#17B26A"></span></div>
+            </div>
+            <div style="position:absolute;left:16px;bottom:16px;right:16px">
+              <div style="font-family:var(--font-display);font-weight:300;font-size:18px;letter-spacing:-0.03em;line-height:1.15;color:#18171C">Memory in every connection.</div>
+              <span style="display:block;width:30px;height:2px;background:#17B26A;margin-top:10px"></span>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">1:1 · DEVICE TRACED</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">SOC 02</span></div>
+        </div>
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:340px;overflow:hidden;background:#111015">
+            <span style="position:absolute;right:0;top:0;width:46%;height:46%;background-image:radial-gradient(rgba(43,222,140,0.3) 1px,transparent 1px);background-size:13px 13px;opacity:0.45"></span>
+            <div style="position:absolute;left:16px;top:16px;display:flex;align-items:center;gap:8px">
+              <img src="assets/web/onenz-on-dark-v2.png" style="height:13px;width:auto;display:block" alt="one.nz">
+              <span style="width:1px;height:16px;background:rgba(255,255,255,0.55)"></span>
+              <img src="assets/web/tbmc-icon-green.png" style="height:14px;width:auto;display:block" alt=""><img src="assets/web/tbmc-words-white.png" style="height:14px;width:auto;display:block;margin-left:4px" alt="">
+            </div>
+            <div style="position:absolute;left:16px;right:16px;top:44%">
+              <div style="font-family:'Geist Mono',var(--font-mono);font-size:7px;letter-spacing:0.24em;color:#2BDE8C">AURA · THE SCALE</div>
+              <div style="font-family:var(--font-display);font-weight:300;font-size:22px;letter-spacing:-0.03em;line-height:1.14;color:#F7F6F4;margin-top:9px">Five million connections.<br>One memory.</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px;width:76%"><span style="width:3px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.25"></span><span style="width:3px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.35"></span><span style="width:3px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.45"></span><span style="width:4px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.55"></span><span style="width:4px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.65"></span><span style="width:5px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.75"></span><span style="width:7px;height:3px;border-radius:1px;background:#2BDE8C;opacity:0.85"></span><span style="width:11px;height:3px;border-radius:1px;background:#2BDE8C"></span><span style="width:18px;height:3px;border-radius:1px;background:#2BDE8C"></span></div>
+            </div>
+            <div style="position:absolute;left:16px;bottom:16px;font-family:'Geist Mono',var(--font-mono);font-size:6.5px;letter-spacing:0.22em;color:#8E8D92">NETWORKS CONNECT. MEMORIES COMPOUND.</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">1:1 · STAT HERO</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">SOC 03</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:44px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">OUT OF HOME</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
+      <div style="display:flex;gap:18px;margin-top:24px">
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:240px;overflow:hidden;background:#111015">
+            <img src="assets/web/crowd-2.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(0.9)" alt="Place, duotone">
+            <span style="position:absolute;inset:0;background:#2BDE8C;mix-blend-mode:color;opacity:0.9"></span>
+            <span style="position:absolute;inset:0;background:#111015;mix-blend-mode:multiply;opacity:0.38"></span>
+            <div style="position:absolute;left:22px;top:50%;transform:translateY(-58%)">
+              <div style="font-family:var(--font-display);font-weight:300;font-size:24px;letter-spacing:-0.03em;line-height:1.12;color:#F7F6F4">Where connection<br>becomes memory.</div>
+              <span style="display:block;width:34px;height:2px;background:#2BDE8C;margin-top:12px"></span>
+            </div>
+            <div style="position:absolute;left:22px;bottom:14px;display:flex;align-items:center;gap:8px">
+              <img src="assets/web/onenz-on-dark-v2.png" style="height:12px;width:auto;display:block" alt="one.nz">
+              <span style="width:1px;height:15px;background:rgba(255,255,255,0.55)"></span>
+              <img src="assets/web/tbmc-icon-green.png" style="height:13px;width:auto;display:block" alt=""><img src="assets/web/tbmc-words-white.png" style="height:13px;width:auto;display:block;margin-left:4px" alt="">
+            </div>
+            <div style="position:absolute;right:16px;bottom:16px;font-family:'Geist Mono',var(--font-mono);font-size:6.5px;letter-spacing:0.2em;color:rgba(255,255,255,0.75)">ONE NZ × THE BRAND MEMORY CO.</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">48-SHEET · PLACE LINE, FULL BLEED</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">OOH 01</span></div>
+        </div>
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:240px;overflow:hidden;display:flex">
+            <div style="width:46%;background:#111015;padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between">
+              <div>
+                <div style="font-family:var(--font-display);font-weight:300;font-size:18.5px;letter-spacing:-0.03em;line-height:1.16;color:#F7F6F4">The network never drops.<br>The brand never forgets.</div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;width:72%"><span style="width:2px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.3"></span><span style="width:2px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.45"></span><span style="width:3px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.6"></span><span style="width:4px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.75"></span><span style="width:6px;height:2px;border-radius:1px;background:#2BDE8C;opacity:0.9"></span><span style="width:10px;height:2px;border-radius:1px;background:#2BDE8C"></span></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <img src="assets/web/onenz-on-dark-v2.png" style="height:11px;width:auto;display:block" alt="one.nz">
+                <span style="width:1px;height:14px;background:rgba(255,255,255,0.55)"></span>
+                <img src="assets/web/tbmc-icon-green.png" style="height:12px;width:auto;display:block" alt=""><img src="assets/web/tbmc-words-white.png" style="height:12px;width:auto;display:block;margin-left:4px" alt="">
+              </div>
+            </div>
+            <span style="width:2px;background:#2BDE8C;flex-shrink:0"></span>
+            <span style="flex:1;position:relative;overflow:hidden">
+              <img src="assets/web/crowd-0.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(0.8) contrast(1.02)" alt="Crowd of phones">
+              <span style="position:absolute;right:12px;bottom:12px;font-family:'Geist Mono',var(--font-mono);font-size:6px;letter-spacing:0.2em;color:#F4F3F1;background:#111015;padding:5px 8px">NETWORKS CONNECT. MEMORIES COMPOUND.</span>
+            </span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">48-SHEET · PARTNERSHIP SPLIT</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">OOH 02</span></div>
         </div>
       </div>
       <div style="display:flex;align-items:center;gap:16px;margin-top:44px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">MERCH</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>

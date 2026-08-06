@@ -41,3 +41,14 @@
 - Live root and new cap asset return public `200` responses from Vercel.
 - Live phone QA at 390 x 844: eight sections, four motifs, six imagery treatments, six tagline entries, two image slots, no broken images, no console warnings/errors, and zero page-level horizontal overflow.
 - Live desktop QA at 1440 x 900: desktop geometry is unchanged, all fonts and images load, no console warnings/errors, and the theme toggle switches to the deep-green light system correctly.
+
+## Social tiles and out-of-home refresh — 2026-08-06
+
+- New source of truth: `/Users/jenko/Downloads/One NZ & TBMC Fusion Design (4).zip`.
+- Package delta is confined to Section 08: three new social tiles (`SOC 01–03`) and two 48-sheet out-of-home executions (`OOH 01–02`).
+- Supplied runtime and web assets are byte-identical to the current release; retain the existing production metadata, responsive system, domain, and Vercel project.
+- Add phone-specific stacking and preview sizing for social, OOH, and the merch row after the new insertions shift Section 08 child positions.
+- Integrated the package delta exactly: `SOC 01–03` and `OOH 01–02`; the resulting source differs from the supplied source only by production metadata and responsive/reduced-motion rules.
+- Replaced stale starter-skeleton tests with current brand-shell and release-contract coverage; `npm test` now passes both checks after a successful production build.
+- Local phone QA at 390 x 844: Section 08 has 11 content groups, social is single-column at 345px card width, OOH is single-column at 345px card width, previews are 300px/220px respectively, split OOH overflow is zero, all 84 images load, and the console is clean.
+- Local desktop QA at 1440 x 900: social remains three-up (339px cards), OOH remains two-up (517px cards), document width has no horizontal overflow, all images load, and the original desktop shell is unchanged.

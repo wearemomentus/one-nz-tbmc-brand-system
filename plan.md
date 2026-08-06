@@ -23,3 +23,11 @@ Publish the supplied One NZ x TBMC mini brand system at `brand.tbmc.dev`.
 3. [x] Verify v2 content, assets, animation, themes, and responsive layouts locally.
 4. [x] Build and commit the reproducible project source.
 5. [x] Deploy v2 to `brand.tbmc.dev` and verify the live phone and desktop surfaces.
+
+## Social tiles and out-of-home refresh
+
+1. [x] Inspect the new ZIP and isolate the supplied social and out-of-home additions.
+2. [x] Integrate the three social tiles and two out-of-home formats without regressing the existing system.
+3. [x] Extend the phone composition for the new application examples.
+4. [x] Build and verify the complete page locally at phone and desktop sizes.
+5. [ ] Commit, deploy to `brand.tbmc.dev`, and verify the live production surface.
