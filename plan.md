@@ -22,4 +22,4 @@ Publish the supplied One NZ x TBMC mini brand system at `brand.tbmc.dev`.
 2. [x] Integrate the complete v2 page while retaining deliberate phone behavior.
 3. [x] Verify v2 content, assets, animation, themes, and responsive layouts locally.
 4. [x] Build and commit the reproducible project source.
-5. [ ] Deploy v2 to `brand.tbmc.dev` and verify the live phone and desktop surfaces.
+5. [x] Deploy v2 to `brand.tbmc.dev` and verify the live phone and desktop surfaces.

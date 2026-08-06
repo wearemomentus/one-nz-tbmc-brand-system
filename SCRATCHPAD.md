@@ -37,3 +37,7 @@
 - Local phone QA at 390 x 844: eight sections render; 65 images and two image slots load; no broken images, console warnings, or page-level horizontal overflow; theme control is 44px tall and switches correctly.
 - Local desktop QA at 1440 x 900: original 64px hero, 64px shell padding, two-column lockup grid, three-up imagery rows, and five-column palette remain intact.
 - Build verification: `npm run build` passed.
+- Production deployment: `dpl_DSunxnMhyPq3temSwZ6cGJu1n1hC` (`READY`) and aliased to `https://brand.tbmc.dev`.
+- Live root and new cap asset return public `200` responses from Vercel.
+- Live phone QA at 390 x 844: eight sections, four motifs, six imagery treatments, six tagline entries, two image slots, no broken images, no console warnings/errors, and zero page-level horizontal overflow.
+- Live desktop QA at 1440 x 900: desktop geometry is unchanged, all fonts and images load, no console warnings/errors, and the theme toggle switches to the deep-green light system correctly.
