@@ -1,0 +1,17 @@
+/* CDN: Monomaniac One + Inter (no uploads needed). ABC Favorit Mono still missing — self-hosted DM Mono stands in behind it. */
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Inter:wght@400;500&display=swap');
+/* ABC Arizona Mix — self-hosted (variable, weights 100–900). */
+@font-face{font-family:'ABC Arizona Mix';src:url('../fonts/ABC_Arizona_Mix_Variable_Unlicensed_Trial.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'ABC Arizona Mix Unlicensed Trial';src:url('../fonts/ABC_Arizona_Mix_Variable_Unlicensed_Trial.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+/* TWK Lausanne — self-hosted (TWK Lausanne Pan statics). */
+@font-face{font-family:'TWK Lausanne';src:url('../fonts/TWKLausannePan-300.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'TWK Lausanne';src:url('../fonts/TWKLausannePan-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'TWK Lausanne';src:url('../fonts/TWKLausannePan-400Italic.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'TWK Lausanne';src:url('../fonts/TWKLausannePan-500.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'TWK Lausanne';src:url('../fonts/TWKLausannePan-600.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'TWK Lausanne';src:url('../fonts/TWKLausannePan-700.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+/* DM Mono — self-hosted stand-in for ABC Favorit Mono. */
+@font-face{font-family:'DM Mono';src:url('../fonts/DMMono-Light.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Mono';src:url('../fonts/DMMono-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Mono';src:url('../fonts/DMMono-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Mono';src:url('../fonts/DMMono-Italic.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}

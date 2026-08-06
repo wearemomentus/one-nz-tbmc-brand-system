@@ -1,0 +1,15 @@
+:root{
+/* Primary palette — from "Primary palette" slide (frame18) */
+--ink:#18171C;--electric:#0100FF;--slate:#8DB0BB;--mint:#CCFFF8;--grey-300:#D5D5D5;--grey-200:#E5E1E1;--grey-100:#EAEAEA;
+/* Extended blues/cyans observed across motifs + slides */
+--electric-2:#2D00FE;--electric-3:#3300FF;--sky:#3BCEF0;--aqua:#4BFFFF;--cyan:#A0F0FB;--hex-mint:#21FFBC;
+/* Inks / darks */
+--ink-2:#1E1714;--ink-deep:#06141C;--ink-teal:#0F2325;--ink-navy:#1E2B37;--ink-steel:#273848;--black:#000000;
+/* Lights */
+--paper:#FAFAFA;--white:#FFFFFF;--text-light:#E5E5E7;--grey-mid:#6C6B6E;
+/* Semantic aliases */
+--surface-page:var(--grey-100);--surface-dark:var(--ink);--surface-brand:var(--electric);--surface-card:var(--grey-200);
+--text-primary:var(--ink);--text-inverse:var(--text-light);--text-muted:var(--grey-mid);--text-brand:var(--electric);
+--border-brand:var(--electric);--border-ink:var(--ink-deep);
+}
+a{color:var(--electric);text-decoration:none}a:hover{color:var(--electric-2);text-decoration:underline}

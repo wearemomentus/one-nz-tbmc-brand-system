@@ -1,0 +1,23 @@
+:root{
+/* Families (real brand name first, Google stand-in second) */
+--font-display:"ABC Arizona Mix","ABC Arizona Mix Unlicensed Trial",Georgia,serif;
+--font-body:"TWK Lausanne",-apple-system,"Helvetica Neue",Arial,sans-serif;
+--font-mono:"ABC Favorit Mono","DM Mono",ui-monospace,"SF Mono",Menlo,monospace;
+--font-pixel:"Monomaniac One",monospace;
+/* Display (Arizona Mix) — exact values from slides */
+--display-weight:300;--display-tracking:-0.06em;--display-leading:0.97;
+--display-xl:74.524px; /* section titles */
+--display-lg:40.381px; /* panel statements */
+--display-md:33.719px; /* wordmark lockup, leading 0.85 */
+--display-sm:28.586px; /* card wordmark */
+/* Body (TWK Lausanne) */
+--body-weight:400;--body-leading:1.2;
+--body-lg:22px; /* divider subtitles */
+--body-title:80px; /* deck title, weight 500, leading 1.1, tracking -0.04em */
+/* Mono (Favorit Mono) — uppercase technical labels */
+--mono-tracking:0.05em;--mono-leading:1.1;
+--mono-xs:9.912px;--mono-sm:12.018px;--mono-md:16px;--mono-lg:20.249px;
+}
+.t-display{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:var(--display-tracking);line-height:var(--display-leading)}
+.t-body{font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-leading)}
+.t-mono{font-family:var(--font-mono);letter-spacing:var(--mono-tracking);line-height:var(--mono-leading);text-transform:uppercase}

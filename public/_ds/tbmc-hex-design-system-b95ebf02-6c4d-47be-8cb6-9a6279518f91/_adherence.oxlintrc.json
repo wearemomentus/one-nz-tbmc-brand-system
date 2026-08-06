@@ -1,0 +1,170 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": []
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:ABC Arizona Mix|ABC Arizona Mix Unlicensed Trial|TWK Lausanne|DM Mono|Monomaniac One|Inter))/i]",
+        "message": "Font not provided by the design system. Available: ABC Arizona Mix, ABC Arizona Mix Unlicensed Trial, TWK Lausanne, DM Mono, Monomaniac One, Inter."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--aqua",
+      "--black",
+      "--body-leading",
+      "--body-lg",
+      "--body-title",
+      "--body-weight",
+      "--border-brand",
+      "--border-ink",
+      "--cyan",
+      "--display-leading",
+      "--display-lg",
+      "--display-md",
+      "--display-sm",
+      "--display-tracking",
+      "--display-weight",
+      "--display-xl",
+      "--electric",
+      "--electric-2",
+      "--electric-3",
+      "--font-body",
+      "--font-display",
+      "--font-mono",
+      "--font-pixel",
+      "--grey-100",
+      "--grey-200",
+      "--grey-300",
+      "--grey-mid",
+      "--hex-mint",
+      "--ink",
+      "--ink-2",
+      "--ink-deep",
+      "--ink-navy",
+      "--ink-steel",
+      "--ink-teal",
+      "--mint",
+      "--mono-leading",
+      "--mono-lg",
+      "--mono-md",
+      "--mono-sm",
+      "--mono-tracking",
+      "--mono-xs",
+      "--paper",
+      "--salmon",
+      "--sky",
+      "--slate",
+      "--surface-brand",
+      "--surface-card",
+      "--surface-dark",
+      "--surface-page",
+      "--text-brand",
+      "--text-inverse",
+      "--text-light",
+      "--text-muted",
+      "--text-primary",
+      "--white"
+    ],
+    "tokenKinds": {
+      "--ink": "color",
+      "--electric": "color",
+      "--slate": "color",
+      "--mint": "color",
+      "--grey-300": "color",
+      "--grey-200": "color",
+      "--grey-100": "color",
+      "--electric-2": "color",
+      "--electric-3": "color",
+      "--sky": "color",
+      "--aqua": "color",
+      "--cyan": "color",
+      "--hex-mint": "color",
+      "--ink-2": "color",
+      "--ink-deep": "color",
+      "--ink-teal": "color",
+      "--ink-navy": "color",
+      "--ink-steel": "color",
+      "--black": "color",
+      "--paper": "color",
+      "--white": "color",
+      "--text-light": "font",
+      "--grey-mid": "color",
+      "--surface-page": "color",
+      "--surface-dark": "color",
+      "--surface-brand": "color",
+      "--surface-card": "color",
+      "--text-primary": "font",
+      "--text-inverse": "font",
+      "--text-muted": "font",
+      "--text-brand": "font",
+      "--border-brand": "color",
+      "--border-ink": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--font-mono": "font",
+      "--font-pixel": "font",
+      "--display-weight": "font",
+      "--display-tracking": "font",
+      "--display-leading": "font",
+      "--display-xl": "spacing",
+      "--display-lg": "spacing",
+      "--display-md": "spacing",
+      "--display-sm": "spacing",
+      "--body-weight": "font",
+      "--body-leading": "font",
+      "--body-lg": "spacing",
+      "--body-title": "spacing",
+      "--mono-tracking": "font",
+      "--mono-leading": "font",
+      "--mono-xs": "spacing",
+      "--mono-sm": "spacing",
+      "--mono-md": "spacing",
+      "--mono-lg": "spacing",
+      "--salmon": "color"
+    },
+    "fontFamilies": [
+      "ABC Arizona Mix",
+      "ABC Arizona Mix Unlicensed Trial",
+      "DM Mono",
+      "Inter",
+      "Monomaniac One",
+      "TWK Lausanne"
+    ]
+  }
+}
