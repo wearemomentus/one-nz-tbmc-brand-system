@@ -15,3 +15,11 @@ Publish the supplied One NZ x TBMC mini brand system at `brand.tbmc.dev`.
 3. [x] Verify the page at iPhone and desktop viewport sizes.
 4. [x] Deploy the refined build to `brand.tbmc.dev`.
 5. [x] Verify the live hostname and mobile browser behavior.
+
+## Brand system v2 refresh
+
+1. [x] Inspect the new ZIP, PRD, handoff notes, source, assets, and standalone export.
+2. [x] Integrate the complete v2 page while retaining deliberate phone behavior.
+3. [x] Verify v2 content, assets, animation, themes, and responsive layouts locally.
+4. [x] Build and commit the reproducible project source.
+5. [ ] Deploy v2 to `brand.tbmc.dev` and verify the live phone and desktop surfaces.

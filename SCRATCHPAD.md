@@ -25,3 +25,15 @@
 - Live phone QA at 390 x 844: single-column nav/cards, 38px hero, zero document-level horizontal overflow, six rendered sections, no broken images, and no console warnings or errors.
 - Live desktop regression at 1440 x 900: 64px hero, 64px shell padding, two-column lockup grid, five-column palette, zero horizontal overflow, and no broken images.
 - Build verification: `npm run build` passed.
+
+## Brand system v2 refresh — 2026-08-06
+
+- New source of truth: `/Users/jenko/Downloads/One NZ & TBMC Fusion Design (3).zip`.
+- Handoff recommends the standalone v2 export; source is also supplied with runtime, image-slot helper, local fonts, logos, photography, document previews, and cap render.
+- V2 scope: sections 01–08, expanded motifs, new imagery section, tagline ladder, refreshed in-use examples, merch, and the footer stamp `NETWORKS CONNECT. MEMORIES COMPOUND.`.
+- Preserve the existing production domain/project and the intentional mobile composition from the previous release.
+- Integrated the supplied v2 source, `image-slot.js`, 18 new web assets, local design-system assets, and the PRD/README handoff into the repository.
+- Added v2-aware responsive rules for the expanded motifs, six imagery cards, imagery rules, type specimens, tagline ladder/footer stamp, palette, document carousel, channels, merch, and final footer.
+- Local phone QA at 390 x 844: eight sections render; 65 images and two image slots load; no broken images, console warnings, or page-level horizontal overflow; theme control is 44px tall and switches correctly.
+- Local desktop QA at 1440 x 900: original 64px hero, 64px shell padding, two-column lockup grid, three-up imagery rows, and five-column palette remain intact.
+- Build verification: `npm run build` passed.

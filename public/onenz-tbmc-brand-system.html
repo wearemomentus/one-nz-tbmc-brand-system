@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>One NZ × TBMC — Brand System</title>
-<meta name="description" content="The working co-brand system for One NZ Memory + Intelligence and The Brand Memory Co.">
+<title>One NZ × TBMC — Dynamic Brand System</title>
+<meta name="description" content="The live co-brand system for One NZ Memory + Intelligence and The Brand Memory Co.">
 <meta name="theme-color" content="#0E0D11">
 <link rel="icon" type="image/png" href="./favicon.png">
-<meta property="og:title" content="One NZ × TBMC — Brand System">
+<meta property="og:title" content="One NZ × TBMC — Dynamic Brand System">
 <meta property="og:description" content="One system. Two marks. Momentum between them.">
 <meta property="og:image" content="./og.png">
 <script src="./support.js"></script>
@@ -21,14 +21,16 @@
   <link rel="stylesheet" href="_ds/tbmc-hex-design-system-b95ebf02-6c4d-47be-8cb6-9a6279518f91/tokens/fig-tokens.css">
   <link rel="stylesheet" href="_ds/tbmc-hex-design-system-b95ebf02-6c4d-47be-8cb6-9a6279518f91/styles.css">
   <script src="_ds/tbmc-hex-design-system-b95ebf02-6c4d-47be-8cb6-9a6279518f91/_ds_bundle.js"></script>
+  <script src="image-slot.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap">
   <style>
     body{margin:0;background:#0E0D11}
     a{color:#2BDE8C;text-decoration:none}a:hover{color:#CFFFE4;text-decoration:underline}
     @keyframes omPulse{from{opacity:0.15;transform:scale(1)}to{opacity:1;transform:scale(1.35)}}
     @keyframes omWave{0%,100%{opacity:0.22;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+    @keyframes omBreathe{0%,100%{opacity:0.45}50%{opacity:1}}
 
-    /* Phone layout: a deliberate companion to the desktop composition. */
+    /* Phone layout: purposeful companion to the full desktop reference. */
     @media (max-width:720px){
       html,body{overflow-x:hidden}
       body{-webkit-text-size-adjust:100%}
@@ -120,9 +122,7 @@
         transform:scale(.84);
         transform-origin:center;
       }
-      [data-screen-label="Lockup section"]>div:nth-child(2)>div:nth-child(4)>div:first-child{
-        transform:scale(.7);
-      }
+      [data-screen-label="Lockup section"]>div:nth-child(2)>div:nth-child(4)>div:first-child{transform:scale(.7)}
       [data-screen-label="Lockup section"]>div:nth-child(2)>div>div:last-child,
       [data-screen-label="Stamp section"]>div:nth-child(2)>div>div:last-child,
       [data-screen-label="Motif section"]>div:nth-child(2)>div>div:last-child{
@@ -137,11 +137,9 @@
       }
       [data-screen-label="Lockup section"]>div:nth-child(2)>div>div:last-child>span:last-child,
       [data-screen-label="Stamp section"]>div:nth-child(2)>div>div:last-child>span:last-child,
-      [data-screen-label="Motif section"]>div:nth-child(2)>div>div:last-child>span:last-child{
-        flex-shrink:0;
-      }
+      [data-screen-label="Motif section"]>div:nth-child(2)>div>div:last-child>span:last-child{flex-shrink:0}
       [data-screen-label="Motif section"]>div:nth-child(2)>div>div:first-child{
-        min-height:180px!important;
+        min-height:220px!important;
         padding-left:16px!important;
         padding-right:16px!important;
       }
@@ -161,6 +159,25 @@
         padding-left:27px;
       }
 
+      [data-screen-label="Imagery section"]>div:nth-child(3),
+      [data-screen-label="Imagery section"]>div:nth-child(4){
+        flex-direction:column!important;
+        gap:14px!important;
+      }
+      [data-screen-label="Imagery section"]>div:nth-child(3)>div,
+      [data-screen-label="Imagery section"]>div:nth-child(4)>div{
+        width:100%;
+        min-width:0;
+        flex:none!important;
+      }
+      [data-screen-label="Imagery section"]>div:nth-child(3)>div>div:first-child,
+      [data-screen-label="Imagery section"]>div:nth-child(4)>div>div:first-child{height:280px!important}
+      [data-screen-label="Imagery section"]>div:nth-child(5){
+        flex-direction:column!important;
+        gap:0!important;
+      }
+      [data-screen-label="Imagery section"]>div:nth-child(5)>div{padding:14px 0!important}
+
       [data-screen-label="Type section"]>div:nth-child(2)>div{
         flex-direction:column!important;
         align-items:flex-start!important;
@@ -179,6 +196,30 @@
       [data-screen-label="Type section"]>div:nth-child(2)>div>span:last-child{
         margin-left:0!important;
         margin-top:4px;
+      }
+
+      [data-screen-label="Taglines section"]>div:not(:first-child){
+        flex-direction:column!important;
+        align-items:flex-start!important;
+        gap:14px!important;
+        padding:28px 0!important;
+      }
+      [data-screen-label="Taglines section"]>div:not(:first-child)>div:first-child{font-size:30px!important}
+      [data-screen-label="Taglines section"]>div:not(:first-child)>div:last-child{
+        width:100%!important;
+        min-width:0;
+      }
+      [data-screen-label="Taglines section"]>div:last-child>div:first-child{
+        width:100%;
+        box-sizing:border-box;
+        padding:16px!important;
+        font-size:inherit!important;
+      }
+      [data-screen-label="Taglines section"]>div:last-child>div:first-child>span:last-child{
+        max-width:100%;
+        font-size:7px!important;
+        letter-spacing:.14em!important;
+        white-space:nowrap;
       }
 
       [data-screen-label="Color section"]>div:nth-child(2){
@@ -213,15 +254,19 @@
         flex:0 0 72vw!important;
         scroll-snap-align:start;
       }
-      [data-screen-label="In-use section"]>div:nth-child(4){
+      [data-screen-label="In-use section"]>div:nth-child(4),
+      [data-screen-label="In-use section"]>div:nth-child(6){
         flex-direction:column!important;
         gap:28px!important;
       }
-      [data-screen-label="In-use section"]>div:nth-child(4)>div{
+      [data-screen-label="In-use section"]>div:nth-child(4)>div,
+      [data-screen-label="In-use section"]>div:nth-child(6)>div{
         width:100%;
+        min-width:0;
         flex:none!important;
       }
       [data-screen-label="In-use section"]>div:nth-child(4)>div>div{height:300px!important}
+      [data-screen-label="In-use section"]>div:nth-child(6)>div:first-child>div:first-child{height:300px!important}
       [data-screen-label="In-use section"]>div:last-child{
         flex-direction:column!important;
         align-items:flex-start!important;
@@ -247,11 +292,11 @@
     <div data-screen-label="Nav" style="display:flex;justify-content:space-between;align-items:flex-start;padding:34px 0 26px">
       <div style="display:flex;flex-direction:column">
         <div style="display:flex;align-items:center;gap:14px">
-          <span style="position:relative;display:block;height:24px;width:92px"><img src="assets/onenz-on-dark-v2.png" style="height:24px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/onenz-on-light.png" style="position:absolute;left:0;top:0;height:24px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+          <span style="position:relative;display:block;height:24px;width:92px"><img src="assets/web/onenz-on-dark-v2.png" style="height:24px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/web/onenz-on-light.png" style="position:absolute;left:0;top:0;height:24px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
           <span style="width:1.5px;height:30px;background:var(--bar,rgba(255,255,255,0.5))"></span>
           <span style="display:flex;align-items:center">
-            <span style="position:relative;display:block;height:26px;width:25px"><img src="assets/tbmc-icon-green.png" style="height:26px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:26px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
-            <span style="position:relative;display:block;height:26px;width:72px;margin-left:6px"><img src="assets/tbmc-words-white.png" style="height:26px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:26px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+            <span style="position:relative;display:block;height:26px;width:25px"><img src="assets/web/tbmc-icon-green.png" style="height:26px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:26px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+            <span style="position:relative;display:block;height:26px;width:72px;margin-left:6px"><img src="assets/web/tbmc-words-white.png" style="height:26px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/web/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:26px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
           </span>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px"><span style="width:2px;height:2px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.61s"></span><span style="width:2px;height:2px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.37s"></span><span style="width:2px;height:2px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.13s"></span><span style="width:2px;height:2px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.89s"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.65s"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.41s"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.17s"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-0.93s"></span><span style="width:4px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-0.69s"></span><span style="width:6px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-0.45s"></span><span style="width:10px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-0.21s"></span></div>
@@ -277,11 +322,11 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:20px;margin-top:28px">
         <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;padding:44px 36px 20px;display:flex;flex-direction:column;align-items:center;gap:36px">
           <div style="display:flex;align-items:center;gap:22px">
-            <span style="position:relative;display:block;height:36px;width:138px"><img src="assets/onenz-on-dark-v2.png" style="height:36px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/onenz-on-light.png" style="position:absolute;left:0;top:0;height:36px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+            <span style="position:relative;display:block;height:36px;width:138px"><img src="assets/web/onenz-on-dark-v2.png" style="height:36px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/web/onenz-on-light.png" style="position:absolute;left:0;top:0;height:36px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
             <span style="width:2px;height:46px;background:var(--bar,rgba(255,255,255,0.5))"></span>
             <span style="display:flex;align-items:center">
-              <span style="position:relative;display:block;height:39px;width:37px"><img src="assets/tbmc-icon-green.png" style="height:39px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:39px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
-              <span style="position:relative;display:block;height:39px;width:108px;margin-left:9px"><img src="assets/tbmc-words-white.png" style="height:39px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:39px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+              <span style="position:relative;display:block;height:39px;width:37px"><img src="assets/web/tbmc-icon-green.png" style="height:39px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:39px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+              <span style="position:relative;display:block;height:39px;width:108px;margin-left:9px"><img src="assets/web/tbmc-words-white.png" style="height:39px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/web/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:39px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
             </span>
           </div>
           <div style="width:100%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding-top:12px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">STANDARD · HEADERS AND FORMAL USE</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">10C</span></div>
@@ -289,11 +334,11 @@
         <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;padding:44px 36px 20px;display:flex;flex-direction:column;align-items:center;gap:26px">
           <div style="display:inline-flex;flex-direction:column">
             <div style="display:flex;align-items:center;gap:22px">
-              <span style="position:relative;display:block;height:34px;width:130px"><img src="assets/onenz-on-dark-v2.png" style="height:34px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/onenz-on-light.png" style="position:absolute;left:0;top:0;height:34px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+              <span style="position:relative;display:block;height:34px;width:130px"><img src="assets/web/onenz-on-dark-v2.png" style="height:34px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/web/onenz-on-light.png" style="position:absolute;left:0;top:0;height:34px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
               <span style="width:2px;height:44px;background:var(--bar,rgba(255,255,255,0.5))"></span>
               <span style="display:flex;align-items:center">
-                <span style="position:relative;display:block;height:37px;width:35px"><img src="assets/tbmc-icon-green.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
-                <span style="position:relative;display:block;height:37px;width:102px;margin-left:8px"><img src="assets/tbmc-words-white.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+                <span style="position:relative;display:block;height:37px;width:35px"><img src="assets/web/tbmc-icon-green.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+                <span style="position:relative;display:block;height:37px;width:102px;margin-left:8px"><img src="assets/web/tbmc-words-white.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/web/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
               </span>
             </div>
             <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px"><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);opacity:0.25"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);opacity:0.32"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);opacity:0.39"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);opacity:0.46"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);opacity:0.53"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);opacity:0.6"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);opacity:0.67"></span><span style="width:5px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);opacity:0.74"></span><span style="width:5px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);opacity:0.81"></span><span style="width:6px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);opacity:0.9"></span><span style="width:9px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C)"></span><span style="width:16px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C)"></span><span style="width:26px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C)"></span></div>
@@ -303,11 +348,11 @@
         <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;padding:44px 36px 20px;display:flex;flex-direction:column;align-items:center;gap:26px">
           <div style="display:inline-flex;flex-direction:column">
             <div style="display:flex;align-items:center;gap:22px">
-              <span style="position:relative;display:block;height:34px;width:130px"><img src="assets/onenz-on-dark-v2.png" style="height:34px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/onenz-on-light.png" style="position:absolute;left:0;top:0;height:34px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+              <span style="position:relative;display:block;height:34px;width:130px"><img src="assets/web/onenz-on-dark-v2.png" style="height:34px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/web/onenz-on-light.png" style="position:absolute;left:0;top:0;height:34px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
               <span style="width:2px;height:44px;background:var(--bar,rgba(255,255,255,0.5))"></span>
               <span style="display:flex;align-items:center">
-                <span style="position:relative;display:block;height:37px;width:35px"><img src="assets/tbmc-icon-green.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
-                <span style="position:relative;display:block;height:37px;width:102px;margin-left:8px"><img src="assets/tbmc-words-white.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+                <span style="position:relative;display:block;height:37px;width:35px"><img src="assets/web/tbmc-icon-green.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+                <span style="position:relative;display:block;height:37px;width:102px;margin-left:8px"><img src="assets/web/tbmc-words-white.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/web/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
               </span>
             </div>
             <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px"><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.61s"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.41s"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.21s"></span><span style="width:3px;height:3px;border-radius:1px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.01s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.81s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.61s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.41s"></span><span style="width:5px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.21s"></span><span style="width:5px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.01s"></span><span style="width:6px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-0.81s"></span><span style="width:9px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-0.61s"></span><span style="width:16px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-0.41s"></span><span style="width:26px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-0.21s"></span></div>
@@ -316,11 +361,11 @@
         </div>
         <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;padding:44px 36px 20px;display:flex;flex-direction:column;align-items:center;gap:26px">
           <div style="display:flex;align-items:center">
-            <span style="position:relative;display:block;height:34px;width:130px"><img src="assets/onenz-on-dark-v2.png" style="height:34px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/onenz-on-light.png" style="position:absolute;left:0;top:0;height:34px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+            <span style="position:relative;display:block;height:34px;width:130px"><img src="assets/web/onenz-on-dark-v2.png" style="height:34px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/web/onenz-on-light.png" style="position:absolute;left:0;top:0;height:34px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
             <div style="width:120px;display:flex;align-items:center;justify-content:space-between;margin:0 20px"><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omPulse 1.4s ease-in-out infinite alternate;animation-delay:0s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omPulse 1.4s ease-in-out infinite alternate;animation-delay:0.16s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omPulse 1.4s ease-in-out infinite alternate;animation-delay:0.32s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omPulse 1.4s ease-in-out infinite alternate;animation-delay:0.48s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omPulse 1.4s ease-in-out infinite alternate;animation-delay:0.64s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omPulse 1.4s ease-in-out infinite alternate;animation-delay:0.8s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omPulse 1.4s ease-in-out infinite alternate;animation-delay:0.96s"></span><span style="width:4px;height:4px;border-radius:1.5px;background:var(--grn,#2BDE8C);animation:omPulse 1.4s ease-in-out infinite alternate;animation-delay:1.12s"></span></div>
             <span style="display:flex;align-items:center">
-              <span style="position:relative;display:block;height:37px;width:35px"><img src="assets/tbmc-icon-green.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
-              <span style="position:relative;display:block;height:37px;width:102px;margin-left:8px"><img src="assets/tbmc-words-white.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+              <span style="position:relative;display:block;height:37px;width:35px"><img src="assets/web/tbmc-icon-green.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+              <span style="position:relative;display:block;height:37px;width:102px;margin-left:8px"><img src="assets/web/tbmc-words-white.png" style="height:37px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/web/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:37px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
             </span>
           </div>
           <div style="width:100%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding-top:12px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">CONNECTOR · TWO-WAY PULSE · DIGITAL ONLY</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">10B</span></div>
@@ -334,11 +379,11 @@
         <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;padding:36px;display:flex;flex-direction:column;align-items:center;gap:24px">
           <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.28));border-radius:5px;padding:26px 30px 15px;display:inline-flex;flex-direction:column">
             <div style="display:flex;align-items:center;gap:20px">
-              <span style="position:relative;display:block;height:30px;width:115px"><img src="assets/onenz-on-dark-v2.png" style="height:30px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/onenz-on-light.png" style="position:absolute;left:0;top:0;height:30px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+              <span style="position:relative;display:block;height:30px;width:115px"><img src="assets/web/onenz-on-dark-v2.png" style="height:30px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/web/onenz-on-light.png" style="position:absolute;left:0;top:0;height:30px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
               <span style="width:1.5px;height:38px;background:var(--bar,rgba(255,255,255,0.5))"></span>
               <span style="display:flex;align-items:center">
-                <span style="position:relative;display:block;height:32px;width:31px"><img src="assets/tbmc-icon-green.png" style="height:32px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:32px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
-                <span style="position:relative;display:block;height:32px;width:88px;margin-left:7px"><img src="assets/tbmc-words-white.png" style="height:32px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:32px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+                <span style="position:relative;display:block;height:32px;width:31px"><img src="assets/web/tbmc-icon-green.png" style="height:32px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:32px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+                <span style="position:relative;display:block;height:32px;width:88px;margin-left:7px"><img src="assets/web/tbmc-words-white.png" style="height:32px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="The Brand Memory Co."><img src="assets/web/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:32px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
               </span>
             </div>
             <div style="display:flex;justify-content:space-between;align-items:center;gap:36px;border-top:1px solid var(--ln,rgba(255,255,255,0.18));margin-top:19px;padding-top:11px">
@@ -352,7 +397,7 @@
           <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:4px;padding:16px 18px 14px;display:inline-block">
             <div style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.09em;line-height:2;color:var(--tx3,#7D7C82)">REF ONENZ-TBMC-2026-002 V1.0<br>GENERATED 30 JULY 2026<br>STATUS DRAFT · CONFIDENTIAL</div>
             <div style="display:flex;align-items:flex-start;gap:11px;border-top:1px solid var(--ln,rgba(255,255,255,0.12));margin-top:12px;padding-top:12px">
-              <span style="position:relative;display:block;height:20px;width:23px;margin-top:1px"><img src="assets/aura-icon-green.png" style="height:20px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/aura-icon-green-deep.png" style="position:absolute;left:0;top:0;height:20px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+              <span style="position:relative;display:block;height:20px;width:23px;margin-top:1px"><img src="assets/web/aura-icon-green.png" style="height:20px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/aura-icon-green-deep.png" style="position:absolute;left:0;top:0;height:20px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
               <span>
                 <span style="display:block;font-family:'Geist Mono',var(--font-mono),monospace;font-size:7.5px;letter-spacing:0.24em;color:var(--grn,#2BDE8C)">BRAND MEMORY LAYER [ACTIVE]</span>
                 <span style="display:block;font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.11em;color:var(--tx3,#7D7C82);margin-top:5px">62 MEMORIES PLUGGED INTO THIS DOCUMENT</span>
@@ -364,7 +409,7 @@
       </div>
       <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;padding:20px 26px;margin-top:20px;display:flex;justify-content:space-between;align-items:center">
         <div style="display:flex;align-items:center;gap:10px">
-          <span style="position:relative;display:block;height:15px;width:17px"><img src="assets/aura-icon-green.png" style="height:15px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/aura-icon-green-deep.png" style="position:absolute;left:0;top:0;height:15px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+          <span style="position:relative;display:block;height:15px;width:17px"><img src="assets/web/aura-icon-green.png" style="height:15px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/aura-icon-green-deep.png" style="position:absolute;left:0;top:0;height:15px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
           <span style="font-family:'Geist Mono',var(--font-mono),monospace;font-size:7.5px;letter-spacing:0.24em;color:var(--grn,#2BDE8C)">MEMORY LAYER [ACTIVE]</span>
           <span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.12em;color:var(--tx3,#7D7C82)">· 62 MEMORIES IN THIS DOCUMENT</span>
         </div>
@@ -388,7 +433,7 @@
             <span style="position:absolute;left:260px;top:120px;width:10px;height:10px;background:var(--grn,#2BDE8C);animation:omPulse 2.2s ease-in-out infinite alternate;animation-delay:0.9s"></span>
             <span style="position:absolute;left:320px;top:80px;width:10px;height:10px;background:var(--grn,#2BDE8C);animation:omPulse 2.2s ease-in-out infinite alternate;animation-delay:1.5s"></span>
           </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">PIXEL FIELD · COVERS, OVER THE DOT FIELD</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">MOTIF 01</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">PIXEL FIELD · COVERS, OVER THE DOT FIELD</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">MOTIF 01</span></div>
         </div>
         <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
           <div style="position:relative;height:280px;background-image:radial-gradient(var(--grnsoft,rgba(43,222,140,0.3)) 1px,transparent 1px);background-size:15px 15px;display:flex;flex-direction:column;justify-content:center;gap:9px;padding:0 44px">
@@ -397,13 +442,132 @@
             <div style="display:flex;gap:8px"><span style="width:26px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.6s"></span><span style="width:52px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.25s"></span><span style="width:26px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.9s"></span><span style="width:130px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.55s"></span><span style="width:26px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.2s"></span></div>
             <div style="display:flex;gap:8px;padding-left:40px"><span style="width:52px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.45s"></span><span style="width:26px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-2.1s"></span><span style="width:104px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.75s"></span><span style="width:26px;height:13px;border-radius:2.5px;background:var(--grn,#2BDE8C);animation:omWave 2.6s ease-in-out infinite;animation-delay:-1.4s"></span></div>
           </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">TRAIL UNITS · MOMENTUM READS LEFT TO RIGHT</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">MOTIF 02</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">TRAIL UNITS · MOMENTUM READS LEFT TO RIGHT</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">MOTIF 02</span></div>
+        </div>
+        <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:280px;overflow:hidden;background-image:linear-gradient(var(--ln,rgba(255,255,255,0.13)) 0.5px,transparent 0.5px),linear-gradient(90deg,var(--ln,rgba(255,255,255,0.13)) 0.5px,transparent 0.5px);background-size:30px 30px">
+            <span style="position:absolute;left:20px;top:250px;width:200px;height:1.5px;background:var(--grn,#2BDE8C);opacity:0.75;transform:rotate(-45deg);transform-origin:left center"></span>
+            <span style="position:absolute;left:147px;top:100px;width:26px;height:15px;background:var(--grn,#2BDE8C);animation:omPulse 2.2s ease-in-out infinite alternate;animation-delay:0.2s"></span>
+            <span style="position:absolute;left:90px;top:268px;width:240px;height:1.5px;background:var(--grn,#2BDE8C);opacity:0.75;transform:rotate(-45deg);transform-origin:left center"></span>
+            <span style="position:absolute;left:246px;top:90px;width:26px;height:15px;background:var(--grn,#2BDE8C);animation:omPulse 2.2s ease-in-out infinite alternate;animation-delay:0.9s"></span>
+            <span style="position:absolute;left:170px;top:262px;width:180px;height:1.5px;background:var(--grn,#2BDE8C);opacity:0.75;transform:rotate(-45deg);transform-origin:left center"></span>
+            <span style="position:absolute;left:283px;top:127px;width:26px;height:15px;background:var(--grn,#2BDE8C);animation:omPulse 2.2s ease-in-out infinite alternate;animation-delay:1.5s"></span>
+            <span style="position:absolute;left:260px;top:270px;width:230px;height:1.5px;background:var(--grn,#2BDE8C);opacity:0.75;transform:rotate(-45deg);transform-origin:left center"></span>
+            <span style="position:absolute;left:409px;top:99px;width:26px;height:15px;background:var(--grn,#2BDE8C);animation:omPulse 2.2s ease-in-out infinite alternate;animation-delay:0.5s"></span>
+            <span style="position:absolute;left:350px;top:264px;width:170px;height:1.5px;background:var(--grn,#2BDE8C);opacity:0.75;transform:rotate(-45deg);transform-origin:left center"></span>
+            <span style="position:absolute;left:456px;top:136px;width:26px;height:15px;background:var(--grn,#2BDE8C);animation:omPulse 2.2s ease-in-out infinite alternate;animation-delay:1.8s"></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">NODE CONNECTORS · TRACES END IN PADS</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">MOTIF 03</span></div>
+        </div>
+        <div style="border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:280px;overflow:hidden">
+            <span style="position:absolute;left:0;right:0;top:88px;height:0.5px;background:var(--grnsoft,rgba(43,222,140,0.3))"></span>
+            <span style="position:absolute;left:0;right:0;top:192px;height:0.5px;background:var(--grnsoft,rgba(43,222,140,0.3))"></span>
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:178px;height:178px">
+              <span style="position:absolute;left:-90px;top:28px;width:56px;height:122px;background-image:radial-gradient(var(--grn,#2BDE8C) 1px,transparent 1px);background-size:8px 8px;opacity:0.45"></span>
+              <span style="position:absolute;left:212px;top:28px;width:56px;height:122px;background-image:radial-gradient(var(--grn,#2BDE8C) 1px,transparent 1px);background-size:8px 8px;opacity:0.45"></span>
+              <span style="position:absolute;left:0;top:0;width:34px;height:34px;background:var(--grn,#2BDE8C);opacity:0.85;animation:omBreathe 3.4s ease-in-out infinite;animation-delay:0s"></span>
+              <span style="position:absolute;left:36px;top:36px;width:34px;height:34px;background:var(--grn,#2BDE8C);opacity:0.6;animation:omBreathe 3.4s ease-in-out infinite;animation-delay:0.4s"></span>
+              <span style="position:absolute;left:108px;top:36px;width:34px;height:34px;background:var(--grn,#2BDE8C);opacity:0.7;animation:omBreathe 3.4s ease-in-out infinite;animation-delay:0.8s"></span>
+              <span style="position:absolute;left:144px;top:0;width:34px;height:34px;background:var(--grn,#2BDE8C);opacity:0.5;animation:omBreathe 3.4s ease-in-out infinite;animation-delay:1.2s"></span>
+              <span style="position:absolute;left:54px;top:54px;width:70px;height:70px;background:var(--grn,#2BDE8C);animation:omBreathe 3.4s ease-in-out infinite;animation-delay:1.7s"></span>
+              <span style="position:absolute;left:0;top:144px;width:34px;height:34px;background:var(--grn,#2BDE8C);opacity:0.55;animation:omBreathe 3.4s ease-in-out infinite;animation-delay:2.1s"></span>
+              <span style="position:absolute;left:36px;top:108px;width:34px;height:34px;background:var(--grn,#2BDE8C);opacity:0.75;animation:omBreathe 3.4s ease-in-out infinite;animation-delay:2.5s"></span>
+              <span style="position:absolute;left:108px;top:108px;width:34px;height:34px;background:var(--grn,#2BDE8C);opacity:0.65;animation:omBreathe 3.4s ease-in-out infinite;animation-delay:2.9s"></span>
+              <span style="position:absolute;left:144px;top:144px;width:34px;height:34px;background:var(--grn,#2BDE8C);opacity:0.8;animation:omBreathe 3.4s ease-in-out infinite;animation-delay:3.2s"></span>
+              <span style="position:absolute;left:-44px;top:76px;width:14px;height:14px;background:var(--grn,#2BDE8C);opacity:0.4"></span>
+              <span style="position:absolute;left:208px;top:88px;width:14px;height:14px;background:var(--grn,#2BDE8C);opacity:0.4"></span>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">ORGANIC CONFIG · CLUSTERS BREATHE</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">MOTIF 04</span></div>
         </div>
       </div>
     </div>
 
+    <div data-screen-label="Imagery section" style="padding:70px 0;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13))">
+      <div style="display:flex;align-items:center;gap:16px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">04 — IMAGERY</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
+      <div style="font-family:'Geist',var(--font-body);font-weight:400;font-size:13px;line-height:1.7;color:var(--tx2,#B9B8BC);margin-top:18px;max-width:640px">One NZ subjects — devices, retail, network, business, people — carried in the TBMC treatment: cool grade, motion welcome, green doing the accent work. When the shot isn't ours to own, the dots trace it.</div>
+      <div style="display:flex;gap:18px;margin-top:24px">
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:300px;overflow:hidden;background:#111015">
+            <image-slot id="onenz-people" src="assets/web/photo-iphone.jpg" placeholder="Drop a One NZ people shot" style="position:absolute;inset:0;width:100%;height:100%;filter:grayscale(1) contrast(1.05) brightness(0.92)"></image-slot>
+            <span style="position:absolute;inset:0;background:var(--grn,#2BDE8C);mix-blend-mode:color;opacity:0.9;pointer-events:none"></span>
+            <span style="position:absolute;inset:0;background:#111015;mix-blend-mode:multiply;opacity:0.22;pointer-events:none"></span>
+            <span style="position:absolute;left:14px;top:14px;font-family:'Geist Mono',var(--font-mono);font-size:7px;letter-spacing:0.24em;color:#F4F3F1;background:#111015;padding:6px 9px">ONE NZ × TBMC</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">PEOPLE · GREEN DUOTONE</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">IMG 01</span></div>
+        </div>
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:300px;overflow:hidden;background:#DFDDD8;display:flex;align-items:center;justify-content:center">
+            <div style="position:relative;width:136px;height:262px;border-radius:26px;overflow:hidden;background-image:radial-gradient(var(--grn,#2BDE8C) 1.4px,transparent 1.4px);background-size:9px 9px;animation:omBreathe 4.2s ease-in-out infinite">
+              <span style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:42px;height:13px;border-radius:7px;background:#DFDDD8"></span>
+            </div>
+            <span style="position:absolute;left:74px;bottom:44px;width:64px;height:36px;background-image:radial-gradient(var(--grn,#2BDE8C) 1.2px,transparent 1.2px);background-size:9px 9px;opacity:0.5"></span>
+            <span style="position:absolute;right:70px;top:52px;width:44px;height:26px;background-image:radial-gradient(var(--grn,#2BDE8C) 1.2px,transparent 1.2px);background-size:9px 9px;opacity:0.5"></span>
+            <span style="position:absolute;right:14px;bottom:14px;font-family:'Geist Mono',var(--font-mono);font-size:7px;letter-spacing:0.24em;color:#F4F3F1;background:#111015;padding:6px 9px">IPHONE 17 · TRACED</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">PRODUCT · PATTERN TRACED</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">IMG 02</span></div>
+        </div>
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:300px;overflow:hidden">
+            <div style="position:absolute;inset:0;display:flex">
+              <span style="width:24%;background:#111015"></span>
+              <span style="width:11%;background:var(--grn,#2BDE8C)"></span>
+              <span style="flex:1;position:relative;overflow:hidden"><image-slot id="onenz-campaign" src="assets/web/crowd-1.jpg" placeholder="Drop a One NZ campaign shot" style="position:absolute;inset:0;width:100%;height:100%;filter:saturate(0.85) contrast(1.03)"></image-slot></span>
+            </div>
+            <span style="position:absolute;left:20%;top:32%;width:110px;height:130px;background-image:radial-gradient(var(--grn,#2BDE8C) 1.2px,transparent 1.2px);background-size:9px 9px;opacity:0.75"></span>
+            <span style="position:absolute;left:46%;top:0;bottom:0;width:1.5px;background:var(--grn,#2BDE8C)"></span>
+            <span style="position:absolute;right:26px;top:96px;width:20px;height:20px;background:var(--grn,#2BDE8C)"></span>
+            <span style="position:absolute;right:16px;top:116px;width:20px;height:40px;background:var(--grn,#2BDE8C)"></span>
+            <span style="position:absolute;right:14px;bottom:14px;font-family:'Geist Mono',var(--font-mono);font-size:7px;letter-spacing:0.24em;color:#F4F3F1;background:#111015;padding:6px 9px">THE BRAND MEMORY CO.</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">CAMPAIGN · MOTIF LAYERING</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">IMG 03</span></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:18px;margin-top:18px">
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:300px;overflow:hidden;background:#DFDDD8">
+            <img src="assets/web/crowd-3.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(0.9);opacity:0.32" alt="Device in hand, ghosted">
+            <span style="position:absolute;left:39%;top:24%;width:27%;height:56%;border-radius:16px;background-image:radial-gradient(var(--grn,#2BDE8C) 1.3px,transparent 1.3px);background-size:9px 9px"></span>
+            <span style="position:absolute;left:30%;top:64%;width:9%;height:12%;background-image:radial-gradient(var(--grn,#2BDE8C) 1.1px,transparent 1.1px);background-size:9px 9px;opacity:0.55"></span>
+            <span style="position:absolute;left:67%;top:32%;width:8%;height:9%;background-image:radial-gradient(var(--grn,#2BDE8C) 1.1px,transparent 1.1px);background-size:9px 9px;opacity:0.55"></span>
+            <span style="position:absolute;right:14px;bottom:14px;font-family:'Geist Mono',var(--font-mono);font-size:7px;letter-spacing:0.24em;color:#F4F3F1;background:#111015;padding:6px 9px">MEMORY IN EVERY CONNECTION.</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">DEVICE · TRACED OVER THE SHOT</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">IMG 04</span></div>
+        </div>
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:300px;overflow:hidden;background:#111015">
+            <img src="assets/web/crowd-2.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(0.9)" alt="Motion, event backdrop">
+            <span style="position:absolute;inset:0;background:var(--grn,#2BDE8C);mix-blend-mode:color;opacity:0.9;pointer-events:none"></span>
+            <span style="position:absolute;inset:0;background:#111015;mix-blend-mode:multiply;opacity:0.35;pointer-events:none"></span>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 30px">
+              <div style="font-family:var(--font-display);font-weight:300;font-size:21px;letter-spacing:-0.03em;line-height:1.15;color:#F7F6F4">Where connection<br>becomes memory.</div>
+              <span style="width:34px;height:2px;background:#2BDE8C;margin-top:14px"></span>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">PLACE · EVENT BACKDROP</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">IMG 05</span></div>
+        </div>
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:300px;overflow:hidden;background:#111015">
+            <img src="assets/web/crowd-0.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(0.8) contrast(1.02)" alt="Crowd of phones">
+            <span style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,16,21,0.94) 0%,rgba(17,16,21,0.6) 46%,rgba(17,16,21,0) 78%)"></span>
+            <div style="position:absolute;left:20px;bottom:18px;right:30%">
+              <div style="font-family:'Geist Mono',var(--font-mono);font-size:7px;letter-spacing:0.24em;color:#2BDE8C">AURA · THE SCALE</div>
+              <div style="font-family:var(--font-display);font-weight:300;font-size:20px;letter-spacing:-0.03em;line-height:1.15;color:#F7F6F4;margin-top:8px">Five million connections.<br>One memory.</div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">STAT HERO · THE EXEC MOMENT</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C);white-space:nowrap;flex-shrink:0">IMG 06</span></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:24px;margin-top:24px;border-top:1px solid var(--ln,rgba(255,255,255,0.13))">
+        <div style="flex:1;padding:16px 0;font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:2;color:var(--tx3,#7D7C82)">SUBJECTS<br><span style="color:var(--tx,#F7F6F4)">DEVICES IN HAND · RETAIL · NETWORK · BUSINESS · PEOPLE IN MOTION</span></div>
+        <div style="flex:1;padding:16px 0;font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:2;color:var(--tx3,#7D7C82)">GRADE<br><span style="color:var(--tx,#F7F6F4)">COOL, DESATURATED · MOTION BLUR WELCOME · NEVER WARM STOCK</span></div>
+        <div style="flex:1;padding:16px 0;font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:2;color:var(--tx3,#7D7C82)">RULES<br><span style="color:var(--tx,#F7F6F4)">DUOTONE IN GREEN, NEVER BLUE · DOTS TRACE THE SUBJECT · ONE CHIP PER IMAGE</span></div>
+      </div>
+    </div>
+
     <div data-screen-label="Type section" style="padding:70px 0;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13))">
-      <div style="display:flex;align-items:center;gap:16px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">04 — TYPE</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">05 — TYPE</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
       <div style="display:flex;flex-direction:column;margin-top:12px">
         <div style="display:flex;align-items:baseline;gap:40px;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13));padding:26px 0">
           <span style="width:190px;flex-shrink:0;font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">ABC ARIZONA MIX · LIGHT</span>
@@ -428,8 +592,47 @@
       </div>
     </div>
 
+    <div data-screen-label="Taglines section" style="padding:70px 0;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13))">
+      <div style="display:flex;align-items:center;gap:16px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">06 — TAGLINES</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
+      <div style="display:flex;align-items:baseline;gap:44px;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13));padding:34px 0">
+        <div style="flex:1;font-family:var(--font-display);font-weight:300;font-size:36px;letter-spacing:-0.04em;line-height:1.08;color:var(--tx,#F7F6F4);transition:color 0.35s">“Every memory starts as a connection.”</div>
+        <div style="width:310px;flex-shrink:0"><div style="font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.22em;color:var(--grn,#2BDE8C)">01 · THE ORIGIN LINE</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:1.9;color:var(--tx3,#7D7C82);margin-top:8px">WARM, HUMAN, EDITORIAL · OPENS DOCUMENTS, EDITORIAL AND CAMPAIGN-ADJACENT WORK</div></div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:44px;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13));padding:34px 0">
+        <div style="flex:1;font-family:var(--font-display);font-weight:300;font-size:36px;letter-spacing:-0.04em;line-height:1.08;color:var(--tx,#F7F6F4);transition:color 0.35s">“The network never drops.<br>The brand never forgets.”</div>
+        <div style="width:310px;flex-shrink:0"><div style="font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.22em;color:var(--grn,#2BDE8C)">02 · THE PARTNERSHIP LINE</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:1.9;color:var(--tx3,#7D7C82);margin-top:8px">ONE NZ OWNS THE FIRST CLAUSE, TBMC THE SECOND · FOR DECKS AND ANY SURFACE WHERE BOTH MARKS SHARE A SURFACE · ALWAYS THE FULL STOP, NEVER THE COMMA · THE SIDE HIT ON MERCH</div></div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:44px;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13));padding:34px 0">
+        <div style="flex:1;font-family:var(--font-display);font-weight:300;font-size:36px;letter-spacing:-0.04em;line-height:1.08;color:var(--tx,#F7F6F4);transition:color 0.35s">“Five million connections. One memory.”</div>
+        <div style="width:310px;flex-shrink:0"><div style="font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.22em;color:var(--grn,#2BDE8C)">03 · THE SCALE LINE</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:1.9;color:var(--tx3,#7D7C82);margin-top:8px">THE STAT-HERO SLIDE · THE EXEC MOMENT · THE WHOLE AURA ARCHITECTURE IN SIX WORDS</div></div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:44px;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13));padding:34px 0">
+        <div style="flex:1;font-family:var(--font-display);font-weight:300;font-size:36px;letter-spacing:-0.04em;line-height:1.08;color:var(--tx,#F7F6F4);transition:color 0.35s">“Where connection becomes memory.”</div>
+        <div style="width:310px;flex-shrink:0"><div style="font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.22em;color:var(--grn,#2BDE8C)">04 · THE PLACE LINE</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:1.9;color:var(--tx3,#7D7C82);margin-top:8px">ENVIRONMENTS, SECTION DIVIDERS, PORTAL HEADERS, EVENT BACKDROPS · QUIETLY, THE M+I TEAM'S OWN IDENTITY LINE</div></div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:44px;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13));padding:34px 0">
+        <div style="flex:1;font-family:var(--font-display);font-weight:300;font-size:36px;letter-spacing:-0.04em;line-height:1.08;color:var(--tx,#F7F6F4);transition:color 0.35s">“Memory in every connection.”</div>
+        <div style="width:310px;flex-shrink:0"><div style="font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.22em;color:var(--grn,#2BDE8C)">05 · THE PRODUCT LINE</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:1.9;color:var(--tx3,#7D7C82);margin-top:8px">IN-PRODUCT SURFACES · NEXT TO THE MEMORY STAMP · THE LOOP FOR FRONTLINE STAFF</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:44px;padding:34px 0 0">
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;row-gap:12px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="position:relative;display:block;height:14px;width:54px"><img src="assets/web/onenz-on-dark-v2.png" style="height:14px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt="one.nz"><img src="assets/web/onenz-on-light.png" style="position:absolute;left:0;top:0;height:14px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+            <span style="width:1px;height:18px;background:var(--bar,rgba(255,255,255,0.5))"></span>
+            <span style="display:flex;align-items:center"><span style="position:relative;display:block;height:15px;width:14px"><img src="assets/web/tbmc-icon-green.png" style="height:15px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/tbmc-icon-green-deep.png" style="position:absolute;left:0;top:0;height:15px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span><span style="position:relative;display:block;height:15px;width:42px;margin-left:4px"><img src="assets/web/tbmc-words-white.png" style="height:15px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/tbmc-words-ink.png" style="position:absolute;left:0;top:0;height:15px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px">
+            <span style="position:relative;display:block;height:12px;width:14px"><img src="assets/web/aura-icon-green.png" style="height:12px;width:auto;display:block;opacity:var(--sd,1);transition:opacity 0.35s" alt=""><img src="assets/web/aura-icon-green-deep.png" style="position:absolute;left:0;top:0;height:12px;width:auto;opacity:var(--sl,0);transition:opacity 0.35s" alt=""></span>
+            <span style="font-family:'Geist Mono',var(--font-mono);font-size:7px;letter-spacing:0.22em;color:var(--grn,#2BDE8C);white-space:nowrap">MEMORY LAYER [ACTIVE]</span>
+          </div>
+          <span style="font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.22em;color:var(--tx2,#B9B8BC);white-space:nowrap">NETWORKS CONNECT. MEMORIES COMPOUND.</span>
+        </div>
+        <div style="width:310px;flex-shrink:0"><div style="font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.22em;color:var(--grn,#2BDE8C)">06 · THE STAMP</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;line-height:1.9;color:var(--tx3,#7D7C82);margin-top:8px">FOUR WORDS · FOOTERS, NEXT TO THE LOCKUP, UNDER THE MEMORY STAMP · NEVER THE HEADLINE, ALWAYS PRESENT</div></div>
+      </div>
+    </div>
+
     <div data-screen-label="Color section" style="padding:70px 0;border-bottom:1px solid var(--ln,rgba(255,255,255,0.13))">
-      <div style="display:flex;align-items:center;gap:16px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">05 — SHARED PALETTE</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">07 — SHARED PALETTE</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:28px">
         <div><div style="height:110px;border-radius:6px;background:#111015;border:1px solid var(--cardbd,rgba(255,255,255,0.16))"></div><div style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.12em;color:var(--tx2,#B9B8BC);margin-top:12px">INK</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;color:var(--tx3,#7D7C82);margin-top:4px">#111015 · COVERS</div></div>
         <div><div style="height:110px;border-radius:6px;background:#FCFBFA;border:1px solid var(--cardbd,rgba(255,255,255,0.16))"></div><div style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.12em;color:var(--tx2,#B9B8BC);margin-top:12px">WHITE</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.1em;color:var(--tx3,#7D7C82);margin-top:4px">#FCFBFA · CONTENT</div></div>
@@ -444,24 +647,24 @@
     </div>
 
     <div data-screen-label="In-use section" style="padding:70px 0">
-      <div style="display:flex;align-items:center;gap:16px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">06 — THE SYSTEM IN USE</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">08 — THE SYSTEM IN USE</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
       <div style="display:flex;gap:18px;margin-top:28px">
-        <img src="exports/skill-guide/01-cover-ink.png" style="width:0;flex:1;border-radius:4px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));display:block" alt="Cover, ink">
-        <img src="exports/skill-guide/03-section-cover-pixel.png" style="width:0;flex:1;border-radius:4px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));display:block" alt="Section cover">
-        <img src="exports/skill-guide/06-content-milestones.png" style="width:0;flex:1;border-radius:4px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));display:block" alt="Content page">
-        <img src="exports/skill-guide/08-diagram-ink-box.png" style="width:0;flex:1;border-radius:4px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));display:block" alt="Diagram page">
+        <img src="assets/web/doc-01.jpg" style="width:0;flex:1;border-radius:4px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));display:block" alt="Cover, ink">
+        <img src="assets/web/doc-03.jpg" style="width:0;flex:1;border-radius:4px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));display:block" alt="Section cover">
+        <img src="assets/web/doc-06.jpg" style="width:0;flex:1;border-radius:4px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));display:block" alt="Content page">
+        <img src="assets/web/doc-08.jpg" style="width:0;flex:1;border-radius:4px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));display:block" alt="Diagram page">
       </div>
       <div style="display:flex;align-items:center;gap:16px;margin-top:44px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">OTHER CHANNELS</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
       <div style="display:flex;gap:18px;margin-top:24px;align-items:stretch">
         <div style="flex:1;display:flex;flex-direction:column;gap:12px">
           <div style="position:relative;background:#111015;border-radius:6px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));height:330px;padding:24px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
             <div style="display:flex;align-items:center;gap:10px">
-              <img src="assets/onenz-on-dark-v2.png" style="height:15px;width:auto;display:block" alt="one.nz">
+              <img src="assets/web/onenz-on-dark-v2.png" style="height:15px;width:auto;display:block" alt="one.nz">
               <span style="width:1px;height:20px;background:rgba(255,255,255,0.4)"></span>
-              <img src="assets/tbmc-icon-green.png" style="height:16px;width:auto;display:block" alt=""><img src="assets/tbmc-words-white.png" style="height:16px;width:auto;display:block;margin-left:4px" alt="">
+              <img src="assets/web/tbmc-icon-green.png" style="height:16px;width:auto;display:block" alt=""><img src="assets/web/tbmc-words-white.png" style="height:16px;width:auto;display:block;margin-left:4px" alt="">
             </div>
             <div>
-              <div style="font-family:var(--font-display);font-weight:300;font-size:25px;letter-spacing:-0.035em;line-height:1.1;color:#F7F6F4">The system that holds<br>what a brand knows.</div>
+              <div style="font-family:var(--font-display);font-weight:300;font-size:25px;letter-spacing:-0.035em;line-height:1.1;color:#F7F6F4">Every memory starts<br>as a connection.</div>
               <div style="width:40px;height:2px;background:#2BDE8C;margin-top:16px"></div>
             </div>
             <div style="display:flex;justify-content:space-between;align-items:center">
@@ -476,16 +679,16 @@
             <div style="position:absolute;right:0;bottom:0;width:200px;height:150px;background-image:radial-gradient(rgba(43,222,140,0.3) 1px,transparent 1px);background-size:13px 13px;opacity:0.4"></div>
             <div style="display:flex;justify-content:space-between;align-items:center">
               <div style="display:flex;align-items:center;gap:10px">
-                <img src="assets/onenz-on-dark-v2.png" style="height:14px;width:auto;display:block" alt="one.nz">
+                <img src="assets/web/onenz-on-dark-v2.png" style="height:14px;width:auto;display:block" alt="one.nz">
                 <span style="width:1px;height:18px;background:rgba(255,255,255,0.4)"></span>
-                <img src="assets/tbmc-icon-green.png" style="height:15px;width:auto;display:block" alt=""><img src="assets/tbmc-words-white.png" style="height:15px;width:auto;display:block;margin-left:4px" alt="">
+                <img src="assets/web/tbmc-icon-green.png" style="height:15px;width:auto;display:block" alt=""><img src="assets/web/tbmc-words-white.png" style="height:15px;width:auto;display:block;margin-left:4px" alt="">
               </div>
               <span style="font-family:'Geist Mono',var(--font-mono);font-size:6.5px;letter-spacing:0.24em;color:#7D7C82">MEMORY + INTELLIGENCE</span>
             </div>
             <div style="margin-top:74px">
-              <div style="font-family:var(--font-display);font-weight:300;font-size:34px;letter-spacing:-0.04em;line-height:1.02;color:#F7F6F4">Phase one, defined</div>
+              <div style="font-family:var(--font-display);font-weight:300;font-size:29px;letter-spacing:-0.04em;line-height:1.12;color:#F7F6F4">The network never drops.<br>The brand never forgets.</div>
               <div style="width:44px;height:2px;background:#2BDE8C;margin-top:18px"></div>
-              <div style="font-family:'Geist Mono',var(--font-mono);font-size:7.5px;letter-spacing:0.16em;color:#8E8D92;margin-top:16px">INTO THE STATEMENT OF WORK · 30 JULY 2026</div>
+              <div style="font-family:'Geist Mono',var(--font-mono);font-size:7.5px;letter-spacing:0.16em;color:#8E8D92;margin-top:16px">CO-BRANDED DECK · WHERE BOTH MARKS APPEAR</div>
             </div>
             <div style="position:absolute;left:30px;right:30px;bottom:20px;display:flex;justify-content:space-between;font-family:'Geist Mono',var(--font-mono);font-size:6.5px;letter-spacing:0.18em;color:#6E6D73"><span>ONE NZ × THE BRAND MEMORY CO.</span><span>01 / 12</span></div>
           </div>
@@ -493,9 +696,9 @@
         </div>
         <div style="flex:0.72;display:flex;flex-direction:column;gap:12px">
           <div style="position:relative;background:#111015;border-radius:10px;border:1px solid var(--cardbd,rgba(255,255,255,0.16));height:330px;padding:26px 22px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;overflow:hidden">
-            <img src="assets/onenz-on-dark-v2.png" style="height:16px;width:auto;display:block" alt="one.nz">
+            <img src="assets/web/onenz-on-dark-v2.png" style="height:16px;width:auto;display:block" alt="one.nz">
             <div style="display:flex;align-items:center;gap:8px;margin:12px 0"><span style="width:26px;height:1px;background:rgba(255,255,255,0.25)"></span><span style="width:4px;height:4px;background:#2BDE8C"></span><span style="width:26px;height:1px;background:rgba(255,255,255,0.25)"></span></div>
-            <div style="display:flex;align-items:center"><img src="assets/tbmc-icon-green.png" style="height:16px;width:auto;display:block" alt=""><img src="assets/tbmc-words-white.png" style="height:16px;width:auto;display:block;margin-left:4px" alt=""></div>
+            <div style="display:flex;align-items:center"><img src="assets/web/tbmc-icon-green.png" style="height:16px;width:auto;display:block" alt=""><img src="assets/web/tbmc-words-white.png" style="height:16px;width:auto;display:block;margin-left:4px" alt=""></div>
             <div style="font-family:var(--font-display);font-weight:300;font-size:23px;letter-spacing:-0.03em;color:#F7F6F4;margin-top:34px">Kia ora, Sam</div>
             <div style="font-family:'Geist Mono',var(--font-mono);font-size:6.5px;letter-spacing:0.22em;color:#8E8D92;margin-top:9px">MEMORY + INTELLIGENCE · GUEST</div>
             <div style="display:flex;align-items:center;gap:6px;margin-top:22px;border:1px solid rgba(43,222,140,0.5);border-radius:3px;padding:7px 12px"><span style="width:4px;height:4px;border-radius:50%;background:#2BDE8C"></span><span style="font-family:'Geist Mono',var(--font-mono);font-size:6.5px;letter-spacing:0.22em;color:#2BDE8C">ACCESS [ALL AREAS]</span></div>
@@ -504,8 +707,26 @@
           <span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">EVENT BADGE · LANYARD</span>
         </div>
       </div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:44px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:10px;letter-spacing:0.2em;color:var(--tx2,#B9B8BC)">MERCH</span><span style="flex:1;height:1px;background:var(--ln,rgba(255,255,255,0.13))"></span></div>
+      <div style="display:flex;gap:18px;margin-top:24px">
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;overflow:hidden">
+          <div style="position:relative;height:380px;overflow:hidden;background:#EDECEA"><img src="assets/web/cap-hero.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" alt="Black cap, green TBMC icon, side hit"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">'47 CLEAN UP CAP · BLACK · ONE GREEN ICON</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">MERCH 01</span></div>
+        </div>
+        <div style="flex:1;border:1px solid var(--cardbd,rgba(255,255,255,0.16));border-radius:6px;display:flex;flex-direction:column">
+          <div style="flex:1;padding:28px 26px;display:flex;flex-direction:column;justify-content:center;gap:17px">
+            <div><div style="font-family:'Geist Mono',var(--font-mono);font-size:7.5px;letter-spacing:0.2em;color:var(--grn,#2BDE8C)">EMBROIDERY</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.1em;line-height:1.7;color:var(--tx2,#B9B8BC);margin-top:5px">TBMC ICON IN ONE GREEN — THE ICON IS THE MARK</div></div>
+            <div><div style="font-family:'Geist Mono',var(--font-mono);font-size:7.5px;letter-spacing:0.2em;color:var(--grn,#2BDE8C)">SIDE HIT</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.1em;line-height:1.7;color:var(--tx2,#B9B8BC);margin-top:5px">"THE BRAND NEVER FORGETS" · ONE GREEN THREAD</div></div>
+            <div><div style="font-family:'Geist Mono',var(--font-mono);font-size:7.5px;letter-spacing:0.2em;color:var(--grn,#2BDE8C)">COLOURWAYS</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.1em;line-height:1.7;color:var(--tx2,#B9B8BC);margin-top:5px">BLACK — FURTHER COLOURWAYS TO FOLLOW</div></div>
+            <div><div style="font-family:'Geist Mono',var(--font-mono);font-size:7.5px;letter-spacing:0.2em;color:var(--grn,#2BDE8C)">LOCKUP</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.1em;line-height:1.7;color:var(--tx2,#B9B8BC);margin-top:5px">NEVER ON MERCH — THE ICON CARRIES THE BRAND</div></div>
+            <div><div style="font-family:'Geist Mono',var(--font-mono);font-size:7.5px;letter-spacing:0.2em;color:var(--grn,#2BDE8C)">LABEL</div><div style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.1em;line-height:1.7;color:var(--tx2,#B9B8BC);margin-top:5px">WOVEN: MEMORY + INTELLIGENCE</div></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ln,rgba(255,255,255,0.13));padding:14px 22px"><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">MERCH SPEC</span><span style="font-family:'Geist Mono',var(--font-mono);font-size:8.5px;letter-spacing:0.14em;color:var(--grn,#2BDE8C)">RULES</span></div>
+        </div>
+      </div>
       <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ln,rgba(255,255,255,0.13));margin-top:44px;padding-top:16px">
         <span style="font-family:'Geist Mono',var(--font-mono);font-size:9px;letter-spacing:0.14em;color:var(--tx3,#7D7C82)">ONE NZ × THE BRAND MEMORY CO.</span>
+        <span style="font-family:'Geist Mono',var(--font-mono);font-size:8px;letter-spacing:0.22em;color:var(--tx3,#7D7C82)">NETWORKS CONNECT. MEMORIES COMPOUND.</span>
         <span style="display:flex;align-items:center;gap:8px;font-family:'Geist Mono',var(--font-mono),monospace;font-size:8px;letter-spacing:0.28em;color:var(--grn,#2BDE8C)"><span style="width:5px;height:5px;border-radius:50%;background:var(--grn,#2BDE8C)"></span>SYSTEM LIVE</span>
       </div>
     </div>
