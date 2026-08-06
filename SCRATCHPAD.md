@@ -52,3 +52,8 @@
 - Replaced stale starter-skeleton tests with current brand-shell and release-contract coverage; `npm test` now passes both checks after a successful production build.
 - Local phone QA at 390 x 844: Section 08 has 11 content groups, social is single-column at 345px card width, OOH is single-column at 345px card width, previews are 300px/220px respectively, split OOH overflow is zero, all 84 images load, and the console is clean.
 - Local desktop QA at 1440 x 900: social remains three-up (339px cards), OOH remains two-up (517px cards), document width has no horizontal overflow, all images load, and the original desktop shell is unchanged.
+- Source release commit: `bc5ef17 feat: add social and out-of-home examples`.
+- Production deployment: `dpl_9DsMuGR46BmgoDKXTN3anxVmDeUt` (`READY`) and aliased to `https://brand.tbmc.dev`.
+- Live root and referenced OOH photography return public `200` responses; the live root is byte-for-byte identical to the verified deployment artifact.
+- Live desktop QA at 1440 x 900: three social tiles and two OOH cards render in their intended rows, no horizontal overflow, no broken images, and no console warnings/errors.
+- Live phone QA at 390 x 844: social and OOH stack to 345px cards, split OOH overflow is zero, all images load, and no console warnings/errors are present.

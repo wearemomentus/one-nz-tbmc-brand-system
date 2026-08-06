@@ -30,4 +30,4 @@ Publish the supplied One NZ x TBMC mini brand system at `brand.tbmc.dev`.
 2. [x] Integrate the three social tiles and two out-of-home formats without regressing the existing system.
 3. [x] Extend the phone composition for the new application examples.
 4. [x] Build and verify the complete page locally at phone and desktop sizes.
-5. [ ] Commit, deploy to `brand.tbmc.dev`, and verify the live production surface.
+5. [x] Commit, deploy to `brand.tbmc.dev`, and verify the live production surface.
