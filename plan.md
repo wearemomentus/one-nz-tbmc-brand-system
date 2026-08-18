@@ -39,4 +39,4 @@ Publish the supplied One NZ x TBMC mini brand system at `brand.tbmc.dev`.
 3. [x] Validate and commit the GitHub-ready repository.
 4. [x] Create a private Momentus GitHub repository and push the full main-branch history.
 5. [x] Verify the remote repository and provide the shareable link.
-6. [ ] Make the repository temporarily public and verify anonymous access.
+6. [x] Make the repository temporarily public and verify anonymous access.

@@ -70,3 +70,4 @@
 - Pushed the complete `main` history, attached the production homepage, and added One NZ, TBMC, brand-system, and design-system topics.
 - Verified the local and remote `main` commit SHAs match and the README is readable through the GitHub API.
 - On 2026-08-18, Jenko requested temporary public visibility so the repository can be shared with Tom; update the access note before changing the GitHub setting.
+- GitHub now reports `visibility: PUBLIC` / `isPrivate: false`; anonymous API and repository-page requests both return `200`.
