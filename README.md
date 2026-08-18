@@ -49,4 +49,4 @@ The production domain is attached to the Vercel project `onenz-tbmc-brand-system
 
 ## Access
 
-This repository is private. The supplied client artwork and bundled font files should remain within approved One NZ and TBMC collaborators.
+This repository is temporarily public for collaborator access. Review the supplied client artwork and bundled font licences before treating the repository as a permanent public distribution channel.
