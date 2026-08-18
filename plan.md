@@ -31,3 +31,11 @@ Publish the supplied One NZ x TBMC mini brand system at `brand.tbmc.dev`.
 3. [x] Extend the phone composition for the new application examples.
 4. [x] Build and verify the complete page locally at phone and desktop sizes.
 5. [x] Commit, deploy to `brand.tbmc.dev`, and verify the live production surface.
+
+## GitHub handoff
+
+1. [x] Audit the local history, tracked files, repository size, and secret exposure.
+2. [x] Replace the starter README with a project-specific contributor handoff.
+3. [x] Validate and commit the GitHub-ready repository.
+4. [ ] Create a private Momentus GitHub repository and push the full main-branch history.
+5. [ ] Verify the remote repository and provide the shareable link.

@@ -57,3 +57,12 @@
 - Live root and referenced OOH photography return public `200` responses; the live root is byte-for-byte identical to the verified deployment artifact.
 - Live desktop QA at 1440 x 900: three social tiles and two OOH cards render in their intended rows, no horizontal overflow, no broken images, and no console warnings/errors.
 - Live phone QA at 390 x 844: social and OOH stack to 345px cards, split OOH overflow is zero, all images load, and no console warnings/errors are present.
+
+## GitHub handoff — 2026-08-18
+
+- The production source is a local Git repository at `/Users/jenko/Documents/Codex/2026-08-04/can-you-open-this-zip-file`; it had no GitHub remote before this handoff.
+- Target a private repository in the `wearemomentus` organisation because the source includes client artwork and bundled font files.
+- Tracked Git data is approximately 14 MB, the largest tracked file is under 2 MB, and the scoped secret scan returned no findings.
+- Tom is not identifiable among current `wearemomentus` members or outside collaborators; invite him after obtaining his exact GitHub username.
+- Replaced the generic starter README with project structure, local setup, validation, production ownership, and private-access guidance; aligned the npm package name with the project.
+- `npm test` passes the production build and both brand-system release checks.
