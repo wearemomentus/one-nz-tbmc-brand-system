@@ -66,3 +66,6 @@
 - Tom is not identifiable among current `wearemomentus` members or outside collaborators; invite him after obtaining his exact GitHub username.
 - Replaced the generic starter README with project structure, local setup, validation, production ownership, and private-access guidance; aligned the npm package name with the project.
 - `npm test` passes the production build and both brand-system release checks.
+- Created private repository `wearemomentus/one-nz-tbmc-brand-system`: `https://github.com/wearemomentus/one-nz-tbmc-brand-system`.
+- Pushed the complete `main` history, attached the production homepage, and added One NZ, TBMC, brand-system, and design-system topics.
+- Verified the local and remote `main` commit SHAs match and the README is readable through the GitHub API.
